@@ -1,0 +1,182 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="1000.0" style="-fx-background-color: #d4eefc;" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.josepirir.controller.ClienteController">
+   <children>
+      <Pane prefHeight="400.0" prefWidth="200.0" style="-fx-background-color: #F22E52;">
+         <children>
+            <Pane layoutX="47.0" layoutY="3.0" prefHeight="106.0" prefWidth="106.0" style="-fx-background-color: #d5f3ec; -fx-background-radius: 200 200 200 200;">
+               <children>
+                  <ImageView fitHeight="81.0" fitWidth="112.0" layoutX="13.0" layoutY="13.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../image/Clientes.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <VBox layoutY="174.0" prefHeight="167.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="btnNuevo" mnemonicParsing="false" onAction="#nuevo" prefHeight="48.0" prefWidth="200.0" styleClass="button1" stylesheets="@../resource/KinalStoreCSS.css" text="Nuevo">
+                     <graphic>
+                        <ImageView fx:id="imgNuevo" fitHeight="34.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/Agregar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnEliminar" mnemonicParsing="false" onAction="#eliminar" prefHeight="43.0" prefWidth="200.0" styleClass="button1" stylesheets="@../resource/KinalStoreCSS.css" text="Eliminar">
+                     <graphic>
+                        <ImageView fx:id="imgEliminar" fitHeight="34.0" fitWidth="47.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/Eliminar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnEditar" mnemonicParsing="false" prefHeight="43.0" prefWidth="200.0" styleClass="button1" stylesheets="@../resource/KinalStoreCSS.css" text="Editar">
+                     <graphic>
+                        <ImageView fx:id="imgEditar" fitHeight="34.0" fitWidth="151.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/Editar.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+                  <Button fx:id="btnReporte" mnemonicParsing="false" prefHeight="38.0" prefWidth="200.0" styleClass="button1" stylesheets="@../resource/KinalStoreCSS.css" text="Reporte">
+                     <graphic>
+                        <ImageView fx:id="imgReporte" fitHeight="28.0" fitWidth="37.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../image/Reporte.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                  </Button>
+               </children>
+            </VBox>
+            <Pane layoutY="111.0" prefHeight="52.0" prefWidth="200.0" style="-fx-background-color: #d5f3ec; -fx-background-radius: 200 200 200 200;">
+               <children>
+                  <Label layoutX="68.0" layoutY="16.0" text="Compras">
+                     <font>
+                        <Font name="Book Antiqua" size="16.0" />
+                     </font>
+                  </Label>
+               </children></Pane>
+            <ImageView fitHeight="30.0" fitWidth="31.0" layoutX="85.0" layoutY="356.0" onMouseClicked="#menuPrincipal" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../image/Home.png" />
+               </image>
+               <cursor>
+                  <Cursor fx:constant="HAND" />
+               </cursor>
+            </ImageView>
+         </children>
+      </Pane>
+      <ImageView fitHeight="400.0" fitWidth="804.0" layoutX="200.0" pickOnBounds="true">
+         <image>
+            <Image url="@../image/Fondo.jpg" />
+         </image></ImageView>
+      <ImageView fitHeight="361.0" fitWidth="390.0" layoutX="651.0" layoutY="173.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Nubes.png" />
+         </image>
+      </ImageView>
+      <GridPane layoutX="223.0" layoutY="14.0" prefHeight="123.0" prefWidth="733.0">
+        <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="144.0" minWidth="10.0" prefWidth="144.0" />
+            <ColumnConstraints hgrow="SOMETIMES" maxWidth="206.0" minWidth="10.0" prefWidth="198.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="130.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <Label text="Num Documento">
+               <font>
+                  <Font name="Cambria" size="16.0" />
+               </font>
+            </Label>
+            <Label text="Fech Documento" GridPane.columnIndex="2">
+               <font>
+                  <Font name="Cambria" size="16.0" />
+               </font>
+            </Label>
+            <Label text="Descripción" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Cambria" size="16.0" />
+               </font>
+            </Label>
+            <Label text="Total de Documento" GridPane.columnIndex="2" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Cambria" size="16.0" />
+               </font>
+            </Label>
+            <TextField fx:id="txtNumeroDocumento" editable="false" GridPane.columnIndex="1">
+               <font>
+                  <Font name="Cambria" size="13.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets right="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="txtFechaDocumento" editable="false" GridPane.columnIndex="3">
+               <font>
+                  <Font name="Cambria" size="13.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets right="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="txtDescripcion" editable="false" GridPane.columnIndex="1" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Cambria" size="13.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets right="5.0" />
+               </GridPane.margin>
+            </TextField>
+            <TextField fx:id="txtTotalDocumento" editable="false" GridPane.columnIndex="3" GridPane.rowIndex="1">
+               <font>
+                  <Font name="Cambria" size="13.0" />
+               </font>
+               <GridPane.margin>
+                  <Insets right="5.0" />
+               </GridPane.margin>
+            </TextField>
+         </children>
+      </GridPane>
+      <TableView fx:id="tblCompras" layoutX="222.0" layoutY="149.0" prefHeight="237.0" prefWidth="761.0">
+        <columns>
+          <TableColumn fx:id="colNumeroDocumento" prefWidth="154.0" text="Cod.Cliente" />
+          <TableColumn fx:id="colFechaDocumento" minWidth="0.0" prefWidth="166.0" text="NIT" />
+            <TableColumn fx:id="colDescripcion" prefWidth="169.0" text="Nombres Cliente" />
+            <TableColumn fx:id="colTotalDocumento" prefWidth="271.0" text="Apellidos Cliente" />
+        </columns>
+      </TableView>
+      <ImageView fitHeight="98.0" fitWidth="108.0" layoutX="905.0" layoutY="324.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Nombre.jpeg" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>
